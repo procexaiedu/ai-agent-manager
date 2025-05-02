@@ -8,17 +8,6 @@ services:
     container_name: ai_agent_manager_backend
     ports:
       - "3001:3001"
-    volumes:
-      # Mount source code for development (optional, depends on workflow)
-      # For production, rely on the image built code.
-      # If mounting for dev, ensure node_modules is handled correctly.
-      # - ./backend:/app
-      # Anonymous volume to persist node_modules if needed
-      # - /app/node_modules
-      # For now, let's rely on the image content for simplicity
-      # Add volumes back if live reload during development is needed.
-      # Example for live reload (requires changes in Dockerfile/entrypoint potentially):
-      # - ./backend/src:/app/src 
     env_file:
       - ./backend/.env
     networks:
@@ -32,18 +21,6 @@ services:
     container_name: ai_agent_manager_frontend
     ports:
       - "3000:3000"
-    volumes:
-      # Mount source code for development (optional, depends on workflow)
-      # For production, rely on the image built code.
-      # If mounting for dev, ensure node_modules and .next are handled.
-      # - ./frontend:/app
-      # Anonymous volumes to persist node_modules and .next build cache
-      # - /app/node_modules
-      # - /app/.next
-      # For now, let's rely on the image content for simplicity
-      # Add volumes back if live reload during development is needed.
-      # Example for live reload:
-      # - ./frontend/src:/app/src
     env_file:
       - ./frontend/.env.local
     networks:
