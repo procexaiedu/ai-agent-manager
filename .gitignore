@@ -118,3 +118,20 @@ dist
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Environment variables
+.env*
+!.env.example
+!.env.local.example
+
+# Build outputs (already covered but explicit)
+# dist/
+# .next/
+
+# Keys and Logs
+*.key
+*.log
+
+# Sensitive JSON (e.g., GCloud credentials)
+# Add specific credential file names if possible
+# *.json # Uncomment or specify if you have sensitive JSON files
