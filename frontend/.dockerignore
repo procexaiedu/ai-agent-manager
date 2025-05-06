@@ -1,0 +1,13 @@
+node_modules
+.env
+.env.local
+.next
+*.log
+.git
+.gitignore
+README.md
+Dockerfile
+.dockerignore
+public/robots.txt
+public/sitemap.xml
+coverage
