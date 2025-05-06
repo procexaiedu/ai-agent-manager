@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Heading, Link, List, ListItem } from '@chakra-ui/react';
+import { Box, Heading, Link, List } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 const Sidebar = () => {
@@ -19,35 +19,35 @@ const Sidebar = () => {
       overflowY="auto" // Add scroll for long content
     >
       <Heading size="md" mb={6} color="teal.600">AI Manager</Heading> 
-      <List spacing={3}>
-        <ListItem>
+      <List.Root>
+        <List.Item>
           <Link as={NextLink} href="/dashboard" _hover={{ textDecoration: 'none', color: 'teal.500' }}>Dashboard</Link>
-        </ListItem>
-        <ListItem>
+        </List.Item>
+        <List.Item>
           <Link as={NextLink} href="/playground" _hover={{ textDecoration: 'none', color: 'teal.500' }}>Playground</Link>
-        </ListItem>
-        <ListItem>
+        </List.Item>
+        <List.Item>
           <Link as={NextLink} href="/prompt-engineer" _hover={{ textDecoration: 'none', color: 'teal.500' }}>Prompt Engineer</Link>
-        </ListItem>
-        <ListItem>
+        </List.Item>
+        <List.Item>
           <Link as={NextLink} href="/knowledge" _hover={{ textDecoration: 'none', color: 'teal.500' }}>Knowledge</Link>
-        </ListItem>
-        <ListItem>
+        </List.Item>
+        <List.Item>
           <Link as={NextLink} href="/crm" _hover={{ textDecoration: 'none', color: 'teal.500' }}>CRM</Link>
-        </ListItem>
-        <ListItem>
+        </List.Item>
+        <List.Item>
           <Link as={NextLink} href="/inbox" _hover={{ textDecoration: 'none', color: 'teal.500' }}>Inbox</Link>
-        </ListItem>
-        <ListItem>
+        </List.Item>
+        <List.Item>
           <Heading size="sm" mt={4} mb={2} color="gray.600">Settings</Heading>
-        </ListItem>
-        <ListItem>
+        </List.Item>
+        <List.Item>
           <Link as={NextLink} href="/settings/agent" _hover={{ textDecoration: 'none', color: 'teal.500' }}>Agent Config</Link>
-        </ListItem>
-        <ListItem>
+        </List.Item>
+        <List.Item>
           <Link as={NextLink} href="/settings/system" _hover={{ textDecoration: 'none', color: 'teal.500' }}>System Config</Link>
-        </ListItem>
-      </List>
+        </List.Item>
+      </List.Root>
     </Box>
   );
 };
